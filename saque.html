@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p> Nome: <input type="text"id="nome"></p>
+        <p> Senha: <input type="text"id="Senha"></p>
+        <p> Saldo: <input type="number"id="Saldo" readonly value="2500"></p>
+        <p> Saque: <input type="number"id="saque"></p>
+        <p><button type="button" onclick="obterDados()"> Validar</button>
+        </p>
+        </p>
+    </form>
+    <script>
+        function obterDados(){
+            let result = parseFloat(document.getElementById("Saldo").value);
+            let saque = parseFloat(document.getElementById("saque").value);
+            
+       
+            if(saque <= result){
+            let operacao = result - saque;
+            alert(operacao);
+            }
+        }
+    </script> 
+</body>
+</html>
